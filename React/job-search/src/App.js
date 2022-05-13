@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import JobList from "./pages/job-list/jobList";
 import JobDetails from "./pages/job-details/jobDetails";
+import Job from "./pages/job-details/job";
 import Error from "./pages/Error";
 
 import "./App.scss";
@@ -15,7 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<JobList />} />
-          <Route path="details" element={<JobDetails />} />
+          <Route path="details" element={<JobDetails />}>
+            <Route path=":id" element={<Job />} />
+          </Route>
           <Route path="*" element={<Error />} />
         </Route>
       </Routes>

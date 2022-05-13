@@ -27,7 +27,7 @@ const SearchItem = (props) => {
       <a className="btn btn--primary" href={job.applyUrl} target="_blank">
         Apply
       </a>
-      <Link className="btn btn--link" to={`/details?id=${job.id}`}>
+      <Link className="btn btn--link" to={`/details/${job.id}`}>
         View
       </Link>
     </div>
