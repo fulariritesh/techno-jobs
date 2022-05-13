@@ -1,0 +1,96 @@
+.short {
+  padding: 5rem 0;
+  border-bottom: 2px solid var(--color-grey-light-4);
+
+  &__intro {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__params {
+    display: flex;
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+
+    &__item {
+      font-size: 1.6rem;
+      padding: 0 2rem 0 0;
+      display: flex;
+      align-items: center;
+
+      &--type {
+        background-color: var(--color-grey-light-4);
+        padding-left: 2rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  font-size: 1.8rem;
+
+  &__description {
+    h2 {
+      font-size: 3rem;
+    }
+  }
+
+  &__otherjobs {
+    background-color: #b2c7d6;
+    padding: 2rem;
+    margin: 0 4rem;
+
+    &__heading {
+      text-transform: uppercase;
+      font-size: 2rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        height: 0.6rem;
+        background-color: var(--color-secondary-dark);
+        width: 8rem;
+      }
+    }
+
+    &__jobtitle {
+      margin-top: 3rem;
+      font-size: 1.6rem;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: currentColor;
+    }
+
+    &__params {
+      display: flex;
+      width: fit-content;
+      display: flex;
+      justify-content: space-around;
+
+      &__item {
+        font-size: 1.2rem;
+        padding: 0 2rem 0 0;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.btn {
+  &,
+  &:link,
+  &:visited,
+  &:focus {
+    padding: 0.5rem 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: var(--shadow-light);
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: var(--shadow-dark);
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-light);
+  }
+
+  &--primary {
+    background-image: linear-gradient(
+      45deg,
+      var(--color-primary-dark),
+      var(--color-primary)
+    );
+    color: var(--color-white);
+
+    &:hover {
+      background-image: linear-gradient(
+        45deg,
+        var(--color-primary),
+        var(--color-primary-light)
+      );
+      color: var(--color-primary-dark);
+    }
+  }
+
+  &--link {
+    margin-left: 2rem;
+    color: currentColor;
+  }
+}

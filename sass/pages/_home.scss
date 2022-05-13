@@ -1,0 +1,52 @@
+.jobgroup {
+  &__title {
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      height: 0.6rem;
+      background-color: var(--color-secondary-dark);
+      width: 8rem;
+    }
+  }
+}
+
+.jobitem {
+  display: grid;
+  grid-template-columns: 75% 1fr 1fr;
+  align-items: center;
+
+  &__title {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+
+  &__params {
+    display: flex;
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+
+    &__item {
+      font-size: 1.6rem;
+      padding: 0 2rem 0 0;
+      display: flex;
+      align-items: center;
+
+      &--type {
+        background-color: var(--color-grey-light-4);
+        padding: 0 2rem;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

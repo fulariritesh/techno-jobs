@@ -1,0 +1,10 @@
+.layout {
+  &__header {
+    text-align: center;
+    background-color: var(--color-secondary-dark);
+    color: var(--color-grey-light-3);
+    font-size: 3rem;
+    font-family: math;
+    padding: 2rem 0;
+  }
+}

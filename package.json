@@ -1,0 +1,37 @@
+{
+  "name": "techno-jobs",
+  "version": "1.0.0",
+  "description": "search engine for jobs",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/style.scss React/job-search/public/css/style.css -w",
+    "devserver": "live-server --browser=firefox",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/style.scss React/job-search/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" React/job-search/css/style.comp.css -o React/job-search/css/style.prefix.css",
+    "compress:css": "node-sass React/job-search/css/style.prefix.css React/job-search/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fulariritesh/techno-jobs.git"
+  },
+  "keywords": [
+    "jobs",
+    "job",
+    "search"
+  ],
+  "author": "ritesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fulariritesh/techno-jobs/issues"
+  },
+  "homepage": "https://github.com/fulariritesh/techno-jobs#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "concat": "^1.0.3",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^4.1.1"
+  }
+}
